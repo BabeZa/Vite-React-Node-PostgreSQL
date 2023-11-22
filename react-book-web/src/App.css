@@ -1,38 +1,53 @@
 :root {
-    --color_bg : #f7f8f9;
-    --color_1 : #F7F7F7;
-    --color_2 : #EEEEEE;
-    --color_3 : #393E46;
-    --color_4 : #393E46;
-
     --color_5 : #E5B8F4;
     --color_6 : #C147E9;
     --color_7 : #810CA8;
     --color_8 : #2D033B;
     --color_9 : #6554AF;
 
-    --color_gray_1: #c9c9c9;
-    --color_gray_2: #c1c1c1;
-    --color_gray_3: #dddddd;
-    --color_gray_4: #bfbfbf;
-    --color_gray_5: #a1a1a1;
-    --color_gray: #808080;
+    --color_Lavender_Deep   : #7e37b5;
+    --color_Lavender_Dark   : #8B40C5;
+    --color_Lavender        : #9754CB;
+    --color_Lavender_Light  : #a165d0;
+    --color_Lavender_Bright : #C098DF;
+
+    --color_Vampire_Black   : #050505;
+    --color_Chinese_Black   : #111214;
+    --color_Eerie_Black     : #1A1A1A;
+    --color_Charleston_Green: #282828; 
+    --color_Dark_Charcoal   : #333333;
+    --color_Onyx            : #38383B;
+    --color_Outer_Space     : #474747;
+    
+    --color_Davy_Grey       : #555555;
+    --color_Granite_Gray    : #616161;
+    --color_Gray            : #7E7E7E;
+    --color_Taupe_Gray      : #888888;
+    --color_Argent          : #C0C0C0;
+    --color_Gray_X11        : #BBBBBB;
+    --color_Chinese_Silver  : #CCCCCC;
+    --color_Light_Gray      : #D3D3D3;
+    --color_Bright_Gray     : #EEEEEE;
+    --color_Cultured        : #F5F5F5;
+    --color_Ghost_White     : #F9FAFB;
+
 }
 
-.wrapper {
-    width: 1008px;
-    /* background-color: #ED9ED6; */
-}
-body {
-    background-color: #f7f8f9;
-    
-}
 #root{
     min-height: 100vh;
     display:flex; 
     flex-direction:column;
     align-items: center;
     gap: 0.5rem;
+}
+body {
+    background-color: var(--color_Ghost_White)
+    
+}
+
+.wrapper {
+    width: 1008px;
+    /* background-color: #ED9ED6; */
 }
 
 
@@ -55,3 +70,4 @@ body {
 *::-webkit-scrollbar-button {
     display:none;
 }
+

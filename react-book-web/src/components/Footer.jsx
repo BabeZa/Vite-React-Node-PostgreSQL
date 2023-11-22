@@ -21,7 +21,7 @@ export default function Footer() {
 
 const Container = styled.div`
 
-    background-color: #1B2430;
+    background-color: var(--color_Eerie_Black);
     height: 10rem;
     display: flex;
     justify-content: center;

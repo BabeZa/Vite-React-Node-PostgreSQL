@@ -6,7 +6,6 @@ import Modal from './Modal';
 import LoginRouterModal from './LoginRouterModal';
 
 const links = [
-    { name: "New", link: "/browse", icon: "today" },
     { name: "Browse", link: "/browse", icon: "view_list" },
     { name: "ranking", link: "/ranking", icon: "format_list_bulleted" },
     { name: "Create", link: "/create", icon: "stylus_note" },
@@ -25,19 +24,25 @@ export default function Navbar() {
         <Container>
             <div className="wrapper header-logo">
                 <Link className="logo" to={"/"}>
-                    <img src={logo} alt="Logo" />
+                    <img class="logo-icon" src={logo} alt="Logo" />
                 </Link>
-                <div className="header">
+                <div className="nav-header">
                     <nav>
                         <ul>
                             {links.map(({ name, link, icon }) => {return (
                                 <li key={name}>
-                                    <Link to={link}>
+                                    <Link to={link} class="nav-link">
                                         <i class="material-symbols-outlined">{icon}</i>
                                         <span>{name}</span>
                                     </Link>
                                 </li>
                             )})}
+                            <li>
+                                <div class="nav-link">
+                                    <i class="material-symbols-outlined">search</i>
+                                    <span>Search</span> 
+                                </div>
+                            </li>
                         </ul>
                     </nav> 
                     <div class="user">
@@ -67,7 +72,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    .header {
+    .nav-header {
         align-items: center;
         display: flex;
         text-decoration: none;
@@ -96,11 +101,12 @@ const Container = styled.div`
             font-size: 20px;
             text-decoration: none;
             
-            a{
+            .nav-link{
                 color: #1F1717;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                cursor: pointer;
             }
             i {
                 margin-right: 6px;
@@ -112,8 +118,8 @@ const Container = styled.div`
     }
 
     .button-signin {
-        background-color: var(--color_7);
-        border-radius: 10px;
+        background-color: var(--color_Lavender);
+        border-radius: 0.4rem;
         border-style: none;
         /* box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset; */
         color: #fff;
@@ -122,7 +128,7 @@ const Container = styled.div`
         font-size: 1.25rem;
         outline: 0;
         text-align: center;
-        transition: all .6s ease;
+        /* transition: all .6s ease; */
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
@@ -131,9 +137,13 @@ const Container = styled.div`
     }
 
     .button-signin:hover {
+        background-color: var(--color_Lavender_Dark);
         /* box-shadow: rgba(255, 255, 255, 0) 0 0 0 0 ,rgba(50, 50, 93, .1) 0 5px 5px 0; */
         /* transform: translateY(-1px); */
-        transform: scale(1.02);
+        /* transform: scale(1.02); */
+    }
+    .button-signin:active{
+        background-color: var(--color_Lavender_Deep);
     }
 
 `;

@@ -38,7 +38,7 @@ const Container = styled.div`
     }
 
     .BtnX{
-        color: var(--color_gray);
+        color: var(--color_Gray);
         cursor: pointer;
         font-size: 2rem;
         transition-duration: 0.5s;
@@ -75,11 +75,18 @@ const Container = styled.div`
             width: 100%;
             padding: 0.6rem;
             font-size: 1rem;
-            background-color: var(--color_7);
+            background-color: var(--color_Lavender);
             color: white;
             border: none;
             border-radius: 0.3rem;
             cursor: pointer;
+            transition: opacity .2s;
+        }
+        button:hover {
+            background-color: var(--color_Lavender_Dark);
+        }
+        button:active{
+            background-color: var(--color_Lavender_Deep);
         }
         .policy{
             display: flex;
@@ -87,10 +94,16 @@ const Container = styled.div`
             margin-bottom: 1.5rem;
         }
         .policy h3{
-            color: #707070;
+            color: var(--color_Granite_Gray);
             font-size: 14px;
             font-weight: 500;
             margin-left: 10px;
+        }
+        .forgotpass{
+            color: var(--color_Eerie_Black);
+        }
+        .forgotpass:hover{
+            color: var(--color_Granite_Gray);
         }
         
     }
@@ -109,7 +122,7 @@ const Container = styled.div`
         padding: 0.5em;
         outline: none;
         font-size: 1rem;
-        border: 2px solid var(--color_gray_4);
+        border: 2px solid var(--color_Chinese_Silver);
         border-radius: 0.3rem;
         width: 100%;
     }
@@ -123,7 +136,7 @@ const Container = styled.div`
         margin-left: 0.5em;
         pointer-events: none;
         transition: all 0.3s ease;
-        color: var(--color_gray_5);
+        color: var(--color_Taupe_Gray);
     }
     .inputGroup :is(input:focus, input:valid)~label {
         transform: translateY(-50%) scale(.9);
@@ -133,14 +146,14 @@ const Container = styled.div`
         background-color: #fff;
     }
     .inputGroup :is(input:focus, input:valid) {
-        border-color: var(--color_6);
+        border-color: var(--color_Lavender);
     }
 
     .line {
         display: flex;
         align-items: center;
         margin: 1.5rem -1rem;
-        color: var(--color_gray);
+        color: var(--color_Taupe_Gray);
         font-size: 0.9rem;
         
         &:before,
@@ -149,7 +162,7 @@ const Container = styled.div`
             flex: 1;
             height: 1px;
             margin: 0 1em;
-            background: var(--color_gray_5);
+            background: var(--color_Taupe_Gray);
         }
     }
 
@@ -157,7 +170,7 @@ const Container = styled.div`
         margin-top: 1rem;
     }
     .signup span{
-        color: blue;
+        color: #4895ef;
         cursor: pointer;
     }
 `;
