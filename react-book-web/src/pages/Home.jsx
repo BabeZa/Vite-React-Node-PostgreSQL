@@ -1,37 +1,41 @@
 import React from 'react'
 import styled from "styled-components";
 
-import Slider1 from '../components/Slider1';
+import Slider1 from '../components/Items/Slider1';
+import WeeklyFeatured from '../components/WeeklyFeatured';
+import CompletedNovel from '../components/CompletedNovel';
+import TopBooks from '../components/TopBooks';
 
 export default function Home() {
   return (
     <Container>
-      <div class="flexbox-L">
+      <div className="flexbox-L">
         <div className="section-header">
           <h2>Weekly Book</h2>
-          <hr/>
+          {/* <hr/> */}
         </div>
         <Slider1/>
 
-        
-
       </div>
-      <div class="flexbox-L">
+      <div className="flexbox-L">
         <div className="section-header">
           <h2>New Book</h2>
           <hr/>
         </div>
         
+      </div>
+      <div className="flexbox-XL">
+        <WeeklyFeatured/>
+
 
       </div>
-      <div class="flexbox-XL">
-        <h2>Weekly Featured</h2>
+
+      <div className="flexbox-XL">
+        <CompletedNovel/>
       </div>
-      <div class="flexbox-XL">
-        <h2>Weekly Featured</h2>
-      </div>
-      <div class="flexbox-XL">
-        <h2>Weekly Featured</h2>
+
+      <div className="flexbox-XL">
+        <TopBooks/>
       </div>
       
     </Container>
@@ -46,6 +50,7 @@ const Container = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
+  row-gap: 3rem;
 
   .flexbox-S{
     width: calc(25% - 1rem + (1rem/4));
@@ -70,5 +75,12 @@ const Container = styled.div`
       height: 1px;
       background: var(--color_Argent);
     }
+  }
+  .section-header > .flex-row{
+    justify-content: space-between;
+  }
+  .linkto{
+    font-size: 1.2rem;
+    color: var(--color_Lavender_Deep);
   }
 `;

@@ -1,10 +1,4 @@
 :root {
-    --color_5 : #E5B8F4;
-    --color_6 : #C147E9;
-    --color_7 : #810CA8;
-    --color_8 : #2D033B;
-    --color_9 : #6554AF;
-
     --color_Lavender_Deep   : #7e37b5;
     --color_Lavender_Dark   : #8B40C5;
     --color_Lavender        : #9754CB;
@@ -69,5 +63,23 @@ body {
 /* set button(top and bottom of the scrollbar) */
 *::-webkit-scrollbar-button {
     display:none;
+}
+
+h1{ font-size: 2rem;}
+h2{ font-size: 1.7rem;}
+h3{ font-size: 1.5rem;}
+h4{ font-size: 1.3rem;}
+h4{ font-size: 1.2rem;}
+
+.flex-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    /* justify-content: space-between; */
+}
+
+.flex-row-gap{
+    gap: 1.4rem;
 }
 

@@ -24,29 +24,29 @@ export default function Navbar() {
         <Container>
             <div className="wrapper header-logo">
                 <Link className="logo" to={"/"}>
-                    <img class="logo-icon" src={logo} alt="Logo" />
+                    <img className="logo-icon" src={logo} alt="Logo" />
                 </Link>
                 <div className="nav-header">
                     <nav>
                         <ul>
                             {links.map(({ name, link, icon }) => {return (
                                 <li key={name}>
-                                    <Link to={link} class="nav-link">
-                                        <i class="material-symbols-outlined">{icon}</i>
+                                    <Link to={link} className="nav-link">
+                                        <i className="material-symbols-outlined">{icon}</i>
                                         <span>{name}</span>
                                     </Link>
                                 </li>
                             )})}
                             <li>
-                                <div class="nav-link">
-                                    <i class="material-symbols-outlined">search</i>
+                                <div className="nav-link">
+                                    <i className="material-symbols-outlined">search</i>
                                     <span>Search</span> 
                                 </div>
                             </li>
                         </ul>
                     </nav> 
-                    <div class="user">
-                        <button class="button-signin" onClick={() => setOpenModal(true)}>SIGN IN</button>
+                    <div className="user">
+                        <button className="button-signin" onClick={() => setOpenModal(true)}>SIGN IN</button>
                     </div>
                 </div>
             </div>

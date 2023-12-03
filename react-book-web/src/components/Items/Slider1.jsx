@@ -10,7 +10,7 @@ const Books = [
     { id: 1, name: "The Colour out of Space", link: "/book/00002-The Colour out of Space", imgURL: "https://cdn-local.mebmarket.com/meb/server1/221543/Thumbnail/book_detail_large.gif?2", dec: "Here is a totally different story that we can highly recommend to you. We could wax rhapsodical in our praise, as the story is one of the finest pieces of literature it has been our good fortune to read. The theme is original, ..." },
     { id: 2, name: "At the Mountain of Madness", link: "/book/00003-At the Mountain of Madness", imgURL: "https://cdn-local.mebmarket.com/meb/server1/221551/Thumbnail/book_detail_large.gif?2", dec: "I am forced into speech because men of science have refused to follow my advice without knowing why. It is altogether against my will that I tell my reasons for opposing this contemplated invasion of the antarctic—with its ..." },
 ];
-const delay = 2500;
+const delay = 20000;
 
 export default function Slider1() {
     const [index, setIndex] = React.useState(0);
@@ -42,15 +42,15 @@ export default function Slider1() {
         <div className="slider-wrapper">
             <div className="slider" >
                 {Books.map(({ id, name, link, imgURL, dec }) => {return(
-                    <a href={link} class="slider-item" id={"slide-"+id} style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
-                        <div class="slider-bg" style={{backgroundImage: `url(${imgURL})`}}></div>
-                        <div class="slider-content">
-                            <div class="slider-content-text">
+                    <a key={id} href={link} className="slider-item" id={"slide-"+id} style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
+                        <div className="slider-bg" style={{backgroundImage: `url(${imgURL})`}}></div>
+                        <div className="slider-content">
+                            <div className="slider-content-text">
                                 <h1>{name}</h1>
                                 <p>{dec}</p>
                             </div>
                             
-                            <div class="slider-content-img">
+                            <div className="slider-content-img">
                                 <img src={imgURL} alt={name} />
                             </div>
                             
@@ -58,7 +58,7 @@ export default function Slider1() {
                     </a>
                 )})}
             </div>
-            <div class="dots">
+            <div className="dots">
                 {Books.map(({ id }) => {return(
                     <span onClick={() => setIndex(id)}></span>
                 )})}
@@ -70,6 +70,7 @@ export default function Slider1() {
 
 
 const Container = styled.div`
+    margin-top: 1rem;
 
     .slider-wrapper{
         position:relative;

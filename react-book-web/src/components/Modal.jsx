@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+import PropTypes from 'prop-types' 
 
 export default function Modal({ open, onClose, children }) {
   if (!open) return null;
@@ -10,6 +11,12 @@ export default function Modal({ open, onClose, children }) {
         </div>
     </Container>
   )
+}
+
+Modal.propTypes = {
+  open: PropTypes.bool, 
+  onClose: PropTypes.func,
+  children: PropTypes.any
 }
 
 const Container = styled.div`
