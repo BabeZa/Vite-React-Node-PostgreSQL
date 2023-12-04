@@ -19,7 +19,7 @@ export default function Footer() {
     )
 }
 
-const Container = styled.div`
+const Container = styled.footer`
 
     background-color: var(--color_Eerie_Black);
     height: 10rem;

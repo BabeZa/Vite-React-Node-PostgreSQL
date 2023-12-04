@@ -62,7 +62,7 @@ const HideNavbar = styled.div`
     height: 5rem;
 `;
 
-const Container = styled.div`
+const Container = styled.header`
     top: 0;
     position: fixed;
     z-index: 90;

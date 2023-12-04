@@ -23,7 +23,11 @@
     --color_Light_Gray      : #D3D3D3;
     --color_Bright_Gray     : #EEEEEE;
     --color_Cultured        : #F5F5F5;
-    --color_Ghost_White     : #F9FAFB;
+    
+    
+    --color_bg_white     : #F9FAFB;
+
+    
 
 }
 
@@ -35,7 +39,7 @@
     gap: 0.5rem;
 }
 body {
-    background-color: var(--color_Ghost_White)
+    background-color: var(--color_bg_white)
     
 }
 

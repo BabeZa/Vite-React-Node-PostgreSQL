@@ -6,6 +6,7 @@ import Ranking from './pages/Ranking.jsx';
 import Create from './pages/Create.jsx';
 import Home from './pages/Home.jsx';
 import Layout from './pages/Layout.jsx';
+import BookView from './pages/BookView.jsx';
 
 
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/create",
         element: <Create />,
+      },
+      {
+        path: '/book/:bookid',
+        element: <BookView />,
       },
       {
         path: '*',

@@ -6,9 +6,9 @@ export default function Layout() {
   return (
     <>  
         <Navbar />
-        <div class="wrapper" style={{flex: 1}}>
+        <main class="wrapper" style={{flex: 1}}>
             <Outlet />
-        </div>
+        </main>
         <Footer />
     </>
   )
